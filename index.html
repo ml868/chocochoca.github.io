@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8ed">
-  <meta name="description" content="ChocoChoca — une boutique pleine de bonnes surprises : céréales, jeux vidéo, consoles, dentifrice, chewing-gums et maillots de foot.">
+  <meta name="description" content="ChocoChoca — une boutique pleine de bonnes surprises : gourmandises, jeux, déco, parfums, coques de téléphone et manettes.">
   <title>ChocoChoca — La boutique des bonnes surprises</title>
   <style>
     :root {
@@ -24,7 +24,7 @@
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Trebuchet MS", Arial, sans-serif; }
     a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
+    button { font: inherit; }
     .top-note { background: var(--ink); color: white; text-align: center; padding: 9px 16px; font-size: .83rem; letter-spacing: .03em; }
     header { position: sticky; top: 0; z-index: 5; background: rgba(255,253,249,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
     .nav { max-width: 1160px; margin: auto; min-height: 76px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -69,9 +69,11 @@
     .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .product { background: white; border: 1px solid rgba(82,60,35,.07); border-radius: 22px; overflow: hidden; box-shadow: 0 8px 20px rgba(67,43,20,.04); transition: transform .2s, box-shadow .2s; }
     .product:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .product[hidden] { display: none; }
     .product-art { min-height: 180px; margin: 12px 12px 0; border-radius: 16px; display: grid; place-items: center; font-size: 5rem; position: relative; }
     .product-art .tag { position: absolute; top: 12px; left: 12px; background: white; border-radius: 99px; padding: 6px 10px; font-size: .7rem; font-weight: 900; letter-spacing: .03em; }
     .bg-peach { background: #ffe0bd; } .bg-lilac { background: #e7dafa; } .bg-mint { background: #d8ebd1; } .bg-sky { background: #d5edf5; } .bg-rose { background: #f8d8d8; } .bg-lemon { background: #fff0a8; }
+    .bg-lavender { background: #e9dcf5; } .bg-coral { background: #ffddd2; } .bg-aqua { background: #d5f0ec; } .bg-blue { background: #dce8ff; }
     .product-info { padding: 16px 17px 18px; }
     .product-info small { color: var(--muted); font-weight: 700; }
     .product-info h3 { margin: 6px 0 12px; font-size: 1.12rem; letter-spacing: -.03em; }
@@ -79,7 +81,6 @@
     .price { font-weight: 900; font-size: 1.05rem; }
     .discover { border: 0; border-radius: 999px; background: #f4f0e9; padding: 9px 13px; font-size: .8rem; font-weight: 900; cursor: pointer; }
     .discover:hover { background: var(--orange); color: white; }
-    .empty { grid-column: 1 / -1; padding: 30px; text-align: center; color: var(--muted); }
     .fun-banner { max-width: 1112px; margin: 70px auto; padding: 34px 40px; background: var(--ink); color: white; border-radius: 26px; display: flex; justify-content: space-between; align-items: center; gap: 25px; }
     .fun-banner h2 { max-width: 580px; margin: 0; font-size: clamp(1.7rem, 3vw, 2.5rem); }
     .fun-banner p { margin: 9px 0 0; color: #d5cec5; }
@@ -123,25 +124,29 @@
       <div>
         <div class="eyebrow">🌈 La boutique qui mélange tout</div>
         <h1>De bonnes choses, <span>et des trucs cool.</span></h1>
-        <p class="hero-copy">Des Chocapic pour le petit-déjeuner, des jeux pour s'amuser, des consoles, des maillots de foot… et même de quoi garder un sourire tout frais !</p>
+        <p class="hero-copy">Des gourmandises, des jeux, des objets déco, du parfum, des coques de téléphone et des manettes… il y a de quoi trouver son bonheur !</p>
         <div class="hero-actions"><a class="button button-dark" href="#boutique">Explorer la boutique <span aria-hidden="true">↓</span></a><a class="button button-light" href="#histoire">C'est quoi ChocoChoca ?</a></div>
       </div>
-      <div class="hero-art" aria-label="Illustration d'un bol de céréales et de produits amusants">
-        <div class="art-blob"></div><span class="float one" aria-hidden="true">🎮</span><span class="float two" aria-hidden="true">⚽</span><span class="float three" aria-hidden="true">🪥</span><span class="float four" aria-hidden="true">🎮</span>
-        <div class="art-card"><div class="art-card-top"><span>LE BON MIX</span><span>✦ ✦ ✦</span></div><div class="big-bowl" aria-hidden="true">🥣</div><div class="art-caption">Le bonheur, c'est simple !</div></div>
+      <div class="hero-art" aria-label="Illustration d'une boutique pleine de produits amusants">
+        <div class="art-blob"></div><span class="float one" aria-hidden="true">🎮</span><span class="float two" aria-hidden="true">🌸</span><span class="float three" aria-hidden="true">🎁</span><span class="float four" aria-hidden="true">📱</span>
+        <div class="art-card"><div class="art-card-top"><span>LE BON MIX</span><span>✦ ✦ ✦</span></div><div class="big-bowl" aria-hidden="true">🎁</div><div class="art-caption">Le bonheur, c'est simple !</div></div>
       </div>
     </section>
     <div class="trust-row"><span>🌟 Plein d'idées</span><span>🎁 Pour tous les goûts</span><span>🧡 100 % bonne humeur</span></div>
 
     <section class="shop-section" id="boutique">
       <div class="section-inner">
-        <div class="section-head"><div><div class="kicker">Le bazar préféré</div><h2>À chacun son petit plaisir.</h2></div><p class="section-sub">Fouille dans les rayons : il y a de quoi grignoter, jouer, se brosser les dents et encourager son équipe !</p></div>
+        <div class="section-head"><div><div class="kicker">Le bazar préféré</div><h2>À chacun son petit plaisir.</h2></div><p class="section-sub">Fouille dans les rayons : gourmandises, jeux, déco, parfums et accessoires t'attendent !</p></div>
         <div class="filters" role="group" aria-label="Filtrer les produits">
           <button class="filter active" type="button" data-filter="all" aria-pressed="true">Tout voir</button>
           <button class="filter" type="button" data-filter="gourmandises" aria-pressed="false">🥣 Gourmandises</button>
           <button class="filter" type="button" data-filter="jeux" aria-pressed="false">🎮 Jeux & consoles</button>
           <button class="filter" type="button" data-filter="hygiene" aria-pressed="false">🪥 Hygiène</button>
           <button class="filter" type="button" data-filter="foot" aria-pressed="false">⚽ Football</button>
+          <button class="filter" type="button" data-filter="deco" aria-pressed="false">🪴 Déco</button>
+          <button class="filter" type="button" data-filter="parfum" aria-pressed="false">🌸 Parfums</button>
+          <button class="filter" type="button" data-filter="coques" aria-pressed="false">📱 Coques</button>
+          <button class="filter" type="button" data-filter="manettes" aria-pressed="false">🕹️ Manettes</button>
         </div>
         <div class="products" id="products">
           <article class="product" data-category="gourmandises"><div class="product-art bg-peach"><span class="tag">PETIT-DÉJEUNER</span>🥣</div><div class="product-info"><small>Gourmandises</small><h3>Céréales choco-croustillantes</h3><div class="product-bottom"><span class="price">3,49 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
@@ -150,10 +155,14 @@
           <article class="product" data-category="gourmandises"><div class="product-art bg-lemon"><span class="tag">À MÂCHOUILLER</span>🍬</div><div class="product-info"><small>Gourmandises</small><h3>Chewing-gums fruités</h3><div class="product-bottom"><span class="price">1,50 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="jeux"><div class="product-art bg-sky"><span class="tag">PRÊTE À JOUER</span>🕹️</div><div class="product-info"><small>Jeux & consoles</small><h3>Console de jeu</h3><div class="product-bottom"><span class="price">249,99 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="foot"><div class="product-art bg-rose"><span class="tag">ALLEZ L'ÉQUIPE !</span>👕</div><div class="product-info"><small>Football</small><h3>Maillot de foot des champions</h3><div class="product-bottom"><span class="price">39,99 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="deco"><div class="product-art bg-lavender"><span class="tag">JOLI CHEZ SOI</span>🪴</div><div class="product-info"><small>Décoration</small><h3>Petit pot de plante déco</h3><div class="product-bottom"><span class="price">12,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="parfum"><div class="product-art bg-coral"><span class="tag">DOUCEUR PARFUMÉE</span>🧴</div><div class="product-info"><small>Parfums</small><h3>Eau de parfum fleurie</h3><div class="product-bottom"><span class="price">24,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="coques"><div class="product-art bg-aqua"><span class="tag">PROTÈGE TON TÉLÉPHONE</span>📱</div><div class="product-info"><small>Accessoires téléphone</small><h3>Coque colorée et fantaisie</h3><div class="product-bottom"><span class="price">14,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="manettes"><div class="product-art bg-blue"><span class="tag">PRÊTE À JOUER</span>🎮</div><div class="product-info"><small>Jeux & accessoires</small><h3>Manette sans fil</h3><div class="product-bottom"><span class="price">49,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
         </div>
       </div>
     </section>
-    <section class="fun-banner" id="histoire"><div><h2>Un peu de tout, beaucoup de bonne humeur.</h2><p>ChocoChoca, c'est le coin des envies inattendues et des petits plaisirs.</p></div><a class="button" href="#boutique">Trouver mon bonheur <span aria-hidden="true">→</span></a></section>
+    <section class="fun-banner" id="histoire"><div><h2>Un peu de tout, beaucoup de bonne humeur.</h2><p>ChocoChoca, c'est le coin des envies inattendues et des petits plaisirs.</p></div><a class="button" href="#boutique">Trouver mon bonheur <span aria-hidden="true">↗</span></a></section>
   </main>
   <footer><div class="footer-inner"><span>© 2026 ChocoChoca — Fait avec bonne humeur 🍫</span><span>Une vitrine de démonstration — les produits ne sont pas en vente.</span></div></footer>
   <script>
