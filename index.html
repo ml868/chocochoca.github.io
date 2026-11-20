@@ -4,22 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8ed">
-  <meta name="description" content="ChocoChoca — une boutique pleine de bonnes surprises : gourmandises, jeux, déco, parfums, coques de téléphone et manettes.">
+  <meta name="description" content="ChocoChoca — une boutique pleine de bonnes surprises : gourmandises, jeux, déco, parfums, téléphones, vêtements et accessoires.">
   <title>ChocoChoca — La boutique des bonnes surprises</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #25221f;
-      --muted: #71695f;
-      --paper: #fffdf9;
-      --cream: #fff5e5;
-      --orange: #f27b35;
-      --pink: #f5a2a3;
-      --blue: #a9d8e9;
-      --green: #b6d7a8;
-      --line: #eee5d9;
-      --shadow: 0 16px 38px rgba(67, 43, 20, .09);
-    }
+    :root { color-scheme: light; --ink: #25221f; --muted: #71695f; --paper: #fffdf9; --cream: #fff5e5; --orange: #f27b35; --pink: #f5a2a3; --blue: #a9d8e9; --green: #b6d7a8; --line: #eee5d9; --shadow: 0 16px 38px rgba(67, 43, 20, .09); }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Trebuchet MS", Arial, sans-serif; }
@@ -87,27 +75,8 @@
     .fun-banner .button { background: white; color: var(--ink); white-space: nowrap; }
     footer { border-top: 1px solid var(--line); padding: 26px 24px; color: var(--muted); font-size: .85rem; }
     .footer-inner { max-width: 1160px; margin: auto; display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-    @media (max-width: 760px) {
-      .nav { min-height: 66px; padding: 0 18px; }
-      .nav-links { gap: 13px; font-size: .82rem; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .hero { grid-template-columns: 1fr; padding-top: 50px; gap: 15px; }
-      .hero-art { min-height: 340px; }
-      .trust-row { padding-bottom: 35px; }
-      .section-head { align-items: start; flex-direction: column; }
-      .products { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .product-art { min-height: 145px; font-size: 4rem; }
-      .product-info { padding: 13px; }
-      .product-info h3 { font-size: 1rem; }
-      .fun-banner { margin: 48px 18px; padding: 27px; align-items: start; flex-direction: column; }
-    }
-    @media (max-width: 430px) {
-      .products { grid-template-columns: 1fr; }
-      .product-art { min-height: 190px; }
-      .hero-art { min-height: 300px; }
-      .big-bowl { width: 175px; height: 145px; font-size: 4.7rem; }
-      .float { width: 55px; height: 55px; font-size: 1.6rem; }
-    }
+    @media (max-width: 760px) { .nav { min-height: 66px; padding: 0 18px; } .nav-links { gap: 13px; font-size: .82rem; } .nav-links a:not(.nav-cta) { display: none; } .hero { grid-template-columns: 1fr; padding-top: 50px; gap: 15px; } .hero-art { min-height: 340px; } .trust-row { padding-bottom: 35px; } .section-head { align-items: start; flex-direction: column; } .products { grid-template-columns: repeat(2, 1fr); gap: 12px; } .product-art { min-height: 145px; font-size: 4rem; } .product-info { padding: 13px; } .product-info h3 { font-size: 1rem; } .fun-banner { margin: 48px 18px; padding: 27px; align-items: start; flex-direction: column; } }
+    @media (max-width: 430px) { .products { grid-template-columns: 1fr; } .product-art { min-height: 190px; } .hero-art { min-height: 300px; } .big-bowl { width: 175px; height: 145px; font-size: 4.7rem; } .float { width: 55px; height: 55px; font-size: 1.6rem; } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
   </style>
 </head>
@@ -124,7 +93,7 @@
       <div>
         <div class="eyebrow">🌈 La boutique qui mélange tout</div>
         <h1>De bonnes choses, <span>et des trucs cool.</span></h1>
-        <p class="hero-copy">Des gourmandises, des jeux, des objets déco, du parfum, des coques de téléphone et des manettes… il y a de quoi trouver son bonheur !</p>
+        <p class="hero-copy">Des gourmandises, des jeux, des objets déco, des parfums, des téléphones, des vêtements de luxe et plein d'accessoires pour tous les goûts !</p>
         <div class="hero-actions"><a class="button button-dark" href="#boutique">Explorer la boutique <span aria-hidden="true">↓</span></a><a class="button button-light" href="#histoire">C'est quoi ChocoChoca ?</a></div>
       </div>
       <div class="hero-art" aria-label="Illustration d'une boutique pleine de produits amusants">
@@ -133,10 +102,9 @@
       </div>
     </section>
     <div class="trust-row"><span>🌟 Plein d'idées</span><span>🎁 Pour tous les goûts</span><span>🧡 100 % bonne humeur</span></div>
-
     <section class="shop-section" id="boutique">
       <div class="section-inner">
-        <div class="section-head"><div><div class="kicker">Le bazar préféré</div><h2>À chacun son petit plaisir.</h2></div><p class="section-sub">Fouille dans les rayons : gourmandises, jeux, déco, parfums et accessoires t'attendent !</p></div>
+        <div class="section-head"><div><div class="kicker">Le bazar préféré</div><h2>À chacun son petit plaisir.</h2></div><p class="section-sub">Fouille dans les rayons : gourmandises, jeux, déco, mode, téléphones et accessoires t'attendent !</p></div>
         <div class="filters" role="group" aria-label="Filtrer les produits">
           <button class="filter active" type="button" data-filter="all" aria-pressed="true">Tout voir</button>
           <button class="filter" type="button" data-filter="gourmandises" aria-pressed="false">🥣 Gourmandises</button>
@@ -147,18 +115,28 @@
           <button class="filter" type="button" data-filter="parfum" aria-pressed="false">🌸 Parfums</button>
           <button class="filter" type="button" data-filter="coques" aria-pressed="false">📱 Coques</button>
           <button class="filter" type="button" data-filter="manettes" aria-pressed="false">🕹️ Manettes</button>
+          <button class="filter" type="button" data-filter="telephones" aria-pressed="false">📱 Téléphones</button>
+          <button class="filter" type="button" data-filter="mode" aria-pressed="false">👖 Mode de luxe</button>
+          <button class="filter" type="button" data-filter="audio" aria-pressed="false">🎧 Audio</button>
         </div>
         <div class="products" id="products">
           <article class="product" data-category="gourmandises"><div class="product-art bg-peach"><span class="tag">PETIT-DÉJEUNER</span>🥣</div><div class="product-info"><small>Gourmandises</small><h3>Céréales choco-croustillantes</h3><div class="product-bottom"><span class="price">3,49 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="jeux"><div class="product-art bg-lilac"><span class="tag">POUR S'AMUSER</span>🎮</div><div class="product-info"><small>Jeux vidéo</small><h3>Jeu vidéo — Grande aventure</h3><div class="product-bottom"><span class="price">39,99 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="hygiene"><div class="product-art bg-mint"><span class="tag">SOURIRE FRAIS</span>🪥</div><div class="product-info"><small>Hygiène</small><h3> dentifrice menthe rigolote</h3><div class="product-bottom"><span class="price">2,79 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="jeux"><div class="product-art bg-lilac"><span class="tag">POUR S'AMUSER</span>🎮</div><div class="product-info"><small>Jeux vidéo</small><h3>Jeu vidéo — Grande aventure</h3><div class="product-bottom"><span class="price">50 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="hygiene"><div class="product-art bg-mint"><span class="tag">SOURIRE FRAIS</span>🪥</div><div class="product-info"><small>Hygiène</small><h3>Dentifrice menthe rigolote</h3><div class="product-bottom"><span class="price">2,79 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="gourmandises"><div class="product-art bg-lemon"><span class="tag">À MÂCHOUILLER</span>🍬</div><div class="product-info"><small>Gourmandises</small><h3>Chewing-gums fruités</h3><div class="product-bottom"><span class="price">1,50 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="jeux"><div class="product-art bg-sky"><span class="tag">PRÊTE À JOUER</span>🕹️</div><div class="product-info"><small>Jeux & consoles</small><h3>Console de jeu</h3><div class="product-bottom"><span class="price">299,99 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="jeux"><div class="product-art bg-sky"><span class="tag">PRÊTE À JOUER</span>🕹️</div><div class="product-info"><small>Jeux & consoles</small><h3>Console de jeu</h3><div class="product-bottom"><span class="price">350 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="foot"><div class="product-art bg-rose"><span class="tag">ALLEZ L'ÉQUIPE !</span>👕</div><div class="product-info"><small>Football</small><h3>Maillot de foot des champions</h3><div class="product-bottom"><span class="price">39,99 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="deco"><div class="product-art bg-lavender"><span class="tag">JOLI CHEZ SOI</span>🪴</div><div class="product-info"><small>Décoration</small><h3>Petit pot de plante déco</h3><div class="product-bottom"><span class="price">12,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="parfum"><div class="product-art bg-coral"><span class="tag">DOUCEUR PARFUMÉE</span>🧴</div><div class="product-info"><small>Parfums</small><h3>Eau de parfum fleurie</h3><div class="product-bottom"><span class="price">24,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="coques"><div class="product-art bg-aqua"><span class="tag">PROTÈGE TON TÉLÉPHONE</span>📱</div><div class="product-info"><small>Accessoires téléphone</small><h3>Coque colorée et fantaisie</h3><div class="product-bottom"><span class="price">14,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
           <article class="product" data-category="manettes"><div class="product-art bg-blue"><span class="tag">PRÊTE À JOUER</span>🎮</div><div class="product-info"><small>Jeux & accessoires</small><h3>Manette sans fil</h3><div class="product-bottom"><span class="price">49,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="telephones"><div class="product-art bg-sky"><span class="tag">NOUVEAUTÉ</span>📱</div><div class="product-info"><small>Téléphones</small><h3>Smartphone dernière génération</h3><div class="product-bottom"><span class="price">699,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="foot"><div class="product-art bg-lemon"><span class="tag">SUR LE TERRAIN</span>👟</div><div class="product-info"><small>Football</small><h3>Crampons de football</h3><div class="product-bottom"><span class="price">89,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="mode"><div class="product-art bg-lilac"><span class="tag">STYLE ÉLÉGANT</span>👖</div><div class="product-info"><small>Mode de luxe</small><h3>Pantalon chic</h3><div class="product-bottom"><span class="price">129,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="mode"><div class="product-art bg-rose"><span class="tag">COLLECTION PREMIUM</span>👕</div><div class="product-info"><small>Mode de luxe</small><h3>T-shirt de luxe</h3><div class="product-bottom"><span class="price">89,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="deco"><div class="product-art bg-peach"><span class="tag">PETIT OBJET DÉCO</span>🧸</div><div class="product-info"><small>Décoration</small><h3>Figurine de collection</h3><div class="product-bottom"><span class="price">19,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="audio"><div class="product-art bg-aqua"><span class="tag">SANS FIL</span>🎧</div><div class="product-info"><small>Audio</small><h3>Écouteurs sans fil</h3><div class="product-bottom"><span class="price">59,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+          <article class="product" data-category="audio"><div class="product-art bg-blue"><span class="tag">IMMERSION GAMING</span>🎧</div><div class="product-info"><small>Audio & gaming</small><h3>Casque gaming confortable</h3><div class="product-bottom"><span class="price">79,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
         </div>
       </div>
     </section>
