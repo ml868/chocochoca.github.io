@@ -4,142 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8ed">
-  <meta name="description" content="ChocoChoca — une boutique pleine de bonnes surprises : gourmandises, jeux, déco, parfums, téléphones, vêtements et accessoires.">
+  <meta name="description" content="ChocoChoca — une boutique pleine de bonnes surprises : jeux, mode, déco, gourmandises et accessoires.">
   <title>ChocoChoca — La boutique des bonnes surprises</title>
   <style>
-    :root { color-scheme: light; --ink: #25221f; --muted: #71695f; --paper: #fffdf9; --cream: #fff5e5; --orange: #f27b35; --pink: #f5a2a3; --blue: #a9d8e9; --green: #b6d7a8; --line: #eee5d9; --shadow: 0 16px 38px rgba(67, 43, 20, .09); }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Trebuchet MS", Arial, sans-serif; }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    .top-note { background: var(--ink); color: white; text-align: center; padding: 9px 16px; font-size: .83rem; letter-spacing: .03em; }
-    header { position: sticky; top: 0; z-index: 5; background: rgba(255,253,249,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-    .nav { max-width: 1160px; margin: auto; min-height: 76px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 1.45rem; letter-spacing: -.06em; }
-    .brand-mark { width: 39px; height: 39px; display: grid; place-items: center; background: var(--orange); border-radius: 14px; transform: rotate(-7deg); font-size: 1.35rem; }
-    .nav-links { display: flex; align-items: center; gap: 27px; color: #514a43; font-size: .92rem; font-weight: 700; }
-    .nav-links a:hover { color: var(--orange); }
-    .nav-cta { padding: 11px 17px; color: white !important; background: var(--ink); border-radius: 999px; }
-    main { overflow: hidden; }
-    .hero { max-width: 1160px; margin: auto; padding: 72px 24px 58px; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 42px; }
-    .eyebrow { display: inline-flex; gap: 8px; align-items: center; padding: 8px 13px; border-radius: 99px; background: #fff0d4; color: #825221; font-size: .83rem; font-weight: 800; }
-    h1 { margin: 20px 0 18px; max-width: 620px; font-size: clamp(3rem, 6vw, 5.2rem); line-height: .99; letter-spacing: -.075em; }
-    h1 span { color: var(--orange); }
-    .hero-copy { max-width: 500px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
-    .hero-actions { display: flex; align-items: center; gap: 14px; margin-top: 27px; flex-wrap: wrap; }
-    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 20px; border-radius: 999px; font-weight: 800; transition: transform .18s, box-shadow .18s; }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 9px 20px rgba(37,34,31,.14); }
-    .button-dark { color: white; background: var(--ink); }
-    .button-light { background: white; border: 1px solid var(--line); }
-    .hero-art { min-height: 385px; position: relative; display: grid; place-items: center; }
-    .art-blob { position: absolute; width: min(390px, 85vw); aspect-ratio: 1; background: #ffe3b2; border-radius: 43% 57% 62% 38% / 43% 39% 61% 57%; transform: rotate(-9deg); }
-    .art-card { position: relative; width: min(370px, 90%); padding: 25px; background: white; border: 1px solid rgba(255,255,255,.8); border-radius: 30px; box-shadow: var(--shadow); transform: rotate(3deg); }
-    .art-card-top { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-weight: 700; }
-    .big-bowl { margin: 24px auto 10px; width: 210px; height: 170px; display: grid; place-items: center; background: #f8c56d; border: 12px solid #fff1d2; border-radius: 25% 25% 48% 48% / 18% 18% 62% 62%; font-size: 5.6rem; box-shadow: inset 0 -12px 0 rgba(150,90,25,.1); }
-    .art-caption { text-align: center; font-weight: 900; font-size: 1.15rem; }
-    .float { position: absolute; z-index: 1; display: grid; place-items: center; width: 66px; height: 66px; border: 4px solid white; border-radius: 22px; box-shadow: var(--shadow); font-size: 2rem; }
-    .float.one { top: 37px; left: 3%; background: var(--pink); transform: rotate(-13deg); }
-    .float.two { right: 0; top: 73px; background: var(--blue); transform: rotate(12deg); }
-    .float.three { left: 8%; bottom: 30px; background: var(--green); transform: rotate(9deg); }
-    .float.four { right: 4%; bottom: 28px; background: #d7c0ef; transform: rotate(-9deg); }
-    .trust-row { max-width: 1160px; margin: 0 auto; padding: 0 24px 48px; display: flex; gap: 25px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; font-weight: 700; }
-    .trust-row span { display: flex; align-items: center; gap: 8px; }
-    .shop-section { padding: 75px 24px 86px; background: var(--cream); }
-    .section-inner { max-width: 1160px; margin: auto; }
-    .section-head { display: flex; justify-content: space-between; gap: 25px; align-items: end; margin-bottom: 28px; }
-    .kicker { color: var(--orange); text-transform: uppercase; letter-spacing: .12em; font-weight: 900; font-size: .76rem; }
-    h2 { margin: 8px 0 0; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.06em; }
-    .section-sub { max-width: 430px; margin: 0; color: var(--muted); line-height: 1.6; }
-    .filters { display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 24px; }
-    .filter { border: 1px solid #eadfce; background: rgba(255,255,255,.65); color: #514a43; border-radius: 999px; padding: 9px 15px; font-weight: 800; font-size: .86rem; cursor: pointer; }
-    .filter:hover, .filter.active { border-color: var(--ink); background: var(--ink); color: white; }
-    .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .product { background: white; border: 1px solid rgba(82,60,35,.07); border-radius: 22px; overflow: hidden; box-shadow: 0 8px 20px rgba(67,43,20,.04); transition: transform .2s, box-shadow .2s; }
-    .product:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-    .product[hidden] { display: none; }
-    .product-art { min-height: 180px; margin: 12px 12px 0; border-radius: 16px; display: grid; place-items: center; font-size: 5rem; position: relative; }
-    .product-art .tag { position: absolute; top: 12px; left: 12px; background: white; border-radius: 99px; padding: 6px 10px; font-size: .7rem; font-weight: 900; letter-spacing: .03em; }
-    .bg-peach { background: #ffe0bd; } .bg-lilac { background: #e7dafa; } .bg-mint { background: #d8ebd1; } .bg-sky { background: #d5edf5; } .bg-rose { background: #f8d8d8; } .bg-lemon { background: #fff0a8; }
-    .bg-lavender { background: #e9dcf5; } .bg-coral { background: #ffddd2; } .bg-aqua { background: #d5f0ec; } .bg-blue { background: #dce8ff; }
-    .product-info { padding: 16px 17px 18px; }
-    .product-info small { color: var(--muted); font-weight: 700; }
-    .product-info h3 { margin: 6px 0 12px; font-size: 1.12rem; letter-spacing: -.03em; }
-    .product-bottom { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-    .price { font-weight: 900; font-size: 1.05rem; }
-    .discover { border: 0; border-radius: 999px; background: #f4f0e9; padding: 9px 13px; font-size: .8rem; font-weight: 900; cursor: pointer; }
-    .discover:hover { background: var(--orange); color: white; }
-    .fun-banner { max-width: 1112px; margin: 70px auto; padding: 34px 40px; background: var(--ink); color: white; border-radius: 26px; display: flex; justify-content: space-between; align-items: center; gap: 25px; }
-    .fun-banner h2 { max-width: 580px; margin: 0; font-size: clamp(1.7rem, 3vw, 2.5rem); }
-    .fun-banner p { margin: 9px 0 0; color: #d5cec5; }
-    .fun-banner .button { background: white; color: var(--ink); white-space: nowrap; }
-    footer { border-top: 1px solid var(--line); padding: 26px 24px; color: var(--muted); font-size: .85rem; }
-    .footer-inner { max-width: 1160px; margin: auto; display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-    @media (max-width: 760px) { .nav { min-height: 66px; padding: 0 18px; } .nav-links { gap: 13px; font-size: .82rem; } .nav-links a:not(.nav-cta) { display: none; } .hero { grid-template-columns: 1fr; padding-top: 50px; gap: 15px; } .hero-art { min-height: 340px; } .trust-row { padding-bottom: 35px; } .section-head { align-items: start; flex-direction: column; } .products { grid-template-columns: repeat(2, 1fr); gap: 12px; } .product-art { min-height: 145px; font-size: 4rem; } .product-info { padding: 13px; } .product-info h3 { font-size: 1rem; } .fun-banner { margin: 48px 18px; padding: 27px; align-items: start; flex-direction: column; } }
-    @media (max-width: 430px) { .products { grid-template-columns: 1fr; } .product-art { min-height: 190px; } .hero-art { min-height: 300px; } .big-bowl { width: 175px; height: 145px; font-size: 4.7rem; } .float { width: 55px; height: 55px; font-size: 1.6rem; } }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+    :root{color-scheme:light;--ink:#25221f;--muted:#71695f;--paper:#fffdf9;--cream:#fff5e5;--orange:#f27b35;--pink:#f5a2a3;--blue:#a9d8e9;--green:#b6d7a8;--line:#eee5d9;--shadow:0 16px 38px rgba(67,43,20,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.top-note{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:.83rem;letter-spacing:.03em}header{position:sticky;top:0;z-index:5;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{max-width:1160px;margin:auto;min-height:76px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.45rem;letter-spacing:-.06em}.brand-mark{width:39px;height:39px;display:grid;place-items:center;background:var(--orange);border-radius:14px;transform:rotate(-7deg);font-size:1.35rem}.nav-links{display:flex;align-items:center;gap:27px;color:#514a43;font-size:.92rem;font-weight:700}.nav-links a:hover{color:var(--orange)}.nav-cta{padding:11px 17px;color:#fff!important;background:var(--ink);border-radius:999px}main{overflow:hidden}.hero{max-width:1160px;margin:auto;padding:72px 24px 58px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:42px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border-radius:99px;background:#fff0d4;color:#825221;font-size:.83rem;font-weight:800}h1{margin:20px 0 18px;max-width:620px;font-size:clamp(3rem,6vw,5.2rem);line-height:.99;letter-spacing:-.075em}h1 span{color:var(--orange)}.hero-copy{max-width:500px;color:var(--muted);font-size:1.1rem;line-height:1.7}.hero-actions{display:flex;align-items:center;gap:14px;margin-top:27px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 20px;border-radius:999px;font-weight:800;transition:transform .18s,box-shadow .18s}.button:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(37,34,31,.14)}.button-dark{color:white;background:var(--ink)}.button-light{background:#fff;border:1px solid var(--line)}.hero-art{min-height:385px;position:relative;display:grid;place-items:center}.art-blob{position:absolute;width:min(390px,85vw);aspect-ratio:1;background:#ffe3b2;border-radius:43% 57% 62% 38%/43% 39% 61% 57%;transform:rotate(-9deg)}.art-card{position:relative;width:min(370px,90%);padding:25px;background:white;border:1px solid rgba(255,255,255,.8);border-radius:30px;box-shadow:var(--shadow);transform:rotate(3deg)}.art-card-top{display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem;font-weight:700}.big-bowl{margin:24px auto 10px;width:210px;height:170px;display:grid;place-items:center;background:#f8c56d;border:12px solid #fff1d2;border-radius:25% 25% 48% 48%/18% 18% 62% 62%;font-size:5.6rem;box-shadow:inset 0 -12px 0 rgba(150,90,25,.1)}.art-caption{text-align:center;font-weight:900;font-size:1.15rem}.float{position:absolute;z-index:1;display:grid;place-items:center;width:66px;height:66px;border:4px solid white;border-radius:22px;box-shadow:var(--shadow);font-size:2rem}.float.one{top:37px;left:3%;background:var(--pink);transform:rotate(-13deg)}.float.two{right:0;top:73px;background:var(--blue);transform:rotate(12deg)}.float.three{left:8%;bottom:30px;background:var(--green);transform:rotate(9deg)}.float.four{right:4%;bottom:28px;background:#d7c0ef;transform:rotate(-9deg)}.trust-row{max-width:1160px;margin:0 auto;padding:0 24px 48px;display:flex;gap:25px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:700}.trust-row span{display:flex;align-items:center;gap:8px}.shop-section{padding:75px 24px 86px;background:var(--cream)}.section-inner{max-width:1160px;margin:auto}.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}.kicker{color:var(--orange);text-transform:uppercase;letter-spacing:.12em;font-weight:900;font-size:.76rem}h2{margin:8px 0 0;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.06em}.section-sub{max-width:430px;margin:0;color:var(--muted);line-height:1.6}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid #eadfce;background:rgba(255,255,255,.65);color:#514a43;border-radius:999px;padding:9px 15px;font-weight:800;font-size:.86rem;cursor:pointer}.filter:hover,.filter.active{border-color:var(--ink);background:var(--ink);color:white}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:white;border:1px solid rgba(82,60,35,.07);border-radius:22px;overflow:hidden;box-shadow:0 8px 20px rgba(67,43,20,.04);transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.product[hidden]{display:none}.product-art{min-height:180px;margin:12px 12px 0;border-radius:16px;display:grid;place-items:center;font-size:5rem;position:relative}.product-art .tag{position:absolute;top:12px;left:12px;background:white;border-radius:99px;padding:6px 10px;font-size:.7rem;font-weight:900;letter-spacing:.03em}.bg-peach{background:#ffe0bd}.bg-lilac{background:#e7dafa}.bg-mint{background:#d8ebd1}.bg-sky{background:#d5edf5}.bg-rose{background:#f8d8d8}.bg-lemon{background:#fff0a8}.bg-lavender{background:#e9dcf5}.bg-coral{background:#ffddd2}.bg-aqua{background:#d5f0ec}.bg-blue{background:#dce8ff}.product-info{padding:16px 17px 18px}.product-info small{color:var(--muted);font-weight:700}.product-info h3{margin:6px 0 12px;font-size:1.12rem;letter-spacing:-.03em}.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px}.price{font-weight:900;font-size:1.05rem}.discover{border:0;border-radius:999px;background:#f4f0e9;padding:9px 13px;font-size:.8rem;font-weight:900;cursor:pointer}.discover:hover{background:var(--orange);color:white}.fun-banner{max-width:1112px;margin:70px auto;padding:34px 40px;background:var(--ink);color:white;border-radius:26px;display:flex;justify-content:space-between;align-items:center;gap:25px}.fun-banner h2{max-width:580px;margin:0;font-size:clamp(1.7rem,3vw,2.5rem)}.fun-banner p{margin:9px 0 0;color:#d5cec5}.fun-banner .button{background:white;color:var(--ink);white-space:nowrap}footer{border-top:1px solid var(--line);padding:26px 24px;color:var(--muted);font-size:.85rem}.footer-inner{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.nav{min-height:66px;padding:0 18px}.nav-links{gap:13px;font-size:.82rem}.nav-links a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;padding-top:50px;gap:15px}.hero-art{min-height:340px}.trust-row{padding-bottom:35px}.section-head{align-items:start;flex-direction:column}.products{grid-template-columns:repeat(2,1fr);gap:12px}.product-art{min-height:145px;font-size:4rem}.product-info{padding:13px}.product-info h3{font-size:1rem}.fun-banner{margin:48px 18px;padding:27px;align-items:start;flex-direction:column}}
+    @media(max-width:430px){.products{grid-template-columns:1fr}.product-art{min-height:190px}.hero-art{min-height:300px}.big-bowl{width:175px;height:145px;font-size:4.7rem}.float{width:55px;height:55px;font-size:1.6rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
   <div class="top-note">✨ Bienvenue dans la boutique où il y a un peu de tout ! ✨</div>
-  <header>
-    <nav class="nav" aria-label="Navigation principale">
-      <a class="brand" href="#accueil" aria-label="ChocoChoca, accueil"><span class="brand-mark">🍫</span> chocoChoca</a>
-      <div class="nav-links"><a href="#boutique">La boutique</a><a href="#histoire">Notre univers</a><a class="nav-cta" href="#boutique">Voir les produits <span aria-hidden="true">↗</span></a></div>
-    </nav>
-  </header>
+  <header><nav class="nav" aria-label="Navigation principale"><a class="brand" href="#accueil" aria-label="ChocoChoca, accueil"><span class="brand-mark">🍫</span> chocoChoca</a><div class="nav-links"><a href="#boutique">La boutique</a><a href="#histoire">Notre univers</a><a class="nav-cta" href="#boutique">Voir les produits <span aria-hidden="true">↗</span></a></div></nav></header>
   <main>
-    <section class="hero" id="accueil">
-      <div>
-        <div class="eyebrow">🌈 La boutique qui mélange tout</div>
-        <h1>De bonnes choses, <span>et des trucs cool.</span></h1>
-        <p class="hero-copy">Des gourmandises, des jeux, des objets déco, des parfums, des téléphones, des vêtements de luxe et plein d'accessoires pour tous les goûts !</p>
-        <div class="hero-actions"><a class="button button-dark" href="#boutique">Explorer la boutique <span aria-hidden="true">↓</span></a><a class="button button-light" href="#histoire">C'est quoi ChocoChoca ?</a></div>
-      </div>
-      <div class="hero-art" aria-label="Illustration d'une boutique pleine de produits amusants">
-        <div class="art-blob"></div><span class="float one" aria-hidden="true">🎮</span><span class="float two" aria-hidden="true">🌸</span><span class="float three" aria-hidden="true">🎁</span><span class="float four" aria-hidden="true">📱</span>
-        <div class="art-card"><div class="art-card-top"><span>LE BON MIX</span><span>✦ ✦ ✦</span></div><div class="big-bowl" aria-hidden="true">🎁</div><div class="art-caption">Le bonheur, c'est simple !</div></div>
-      </div>
-    </section>
+    <section class="hero" id="accueil"><div><div class="eyebrow">🌈 La boutique qui mélange tout</div><h1>De bonnes choses, <span>et des trucs cool.</span></h1><p class="hero-copy">Des gourmandises, des jeux, des objets déco, des vêtements et plein d'accessoires pour tous les goûts !</p><div class="hero-actions"><a class="button button-dark" href="#boutique">Explorer la boutique <span aria-hidden="true">↓</span></a><a class="button button-light" href="#histoire">C'est quoi ChocoChoca ?</a></div></div><div class="hero-art" aria-label="Illustration d'une boutique pleine de produits amusants"><div class="art-blob"></div><span class="float one" aria-hidden="true">🎮</span><span class="float two" aria-hidden="true">🌸</span><span class="float three" aria-hidden="true">🎁</span><span class="float four" aria-hidden="true">✨</span><div class="art-card"><div class="art-card-top"><span>LE BON MIX</span><span>✦ ✦ ✦</span></div><div class="big-bowl" aria-hidden="true">🎁</div><div class="art-caption">Le bonheur, c'est simple !</div></div></div></section>
     <div class="trust-row"><span>🌟 Plein d'idées</span><span>🎁 Pour tous les goûts</span><span>🧡 100 % bonne humeur</span></div>
-    <section class="shop-section" id="boutique">
-      <div class="section-inner">
-        <div class="section-head"><div><div class="kicker">Le bazar préféré</div><h2>À chacun son petit plaisir.</h2></div><p class="section-sub">Fouille dans les rayons : gourmandises, jeux, déco, mode, téléphones et accessoires t'attendent !</p></div>
-        <div class="filters" role="group" aria-label="Filtrer les produits">
-          <button class="filter active" type="button" data-filter="all" aria-pressed="true">Tout voir</button>
-          <button class="filter" type="button" data-filter="gourmandises" aria-pressed="false">🥣 Gourmandises</button>
-          <button class="filter" type="button" data-filter="jeux" aria-pressed="false">🎮 Jeux & consoles</button>
-          <button class="filter" type="button" data-filter="hygiene" aria-pressed="false">🪥 Hygiène</button>
-          <button class="filter" type="button" data-filter="foot" aria-pressed="false">⚽ Football</button>
-          <button class="filter" type="button" data-filter="deco" aria-pressed="false">🪴 Déco</button>
-          <button class="filter" type="button" data-filter="parfum" aria-pressed="false">🌸 Parfums</button>
-          <button class="filter" type="button" data-filter="coques" aria-pressed="false">📱 Coques</button>
-          <button class="filter" type="button" data-filter="manettes" aria-pressed="false">🕹️ Manettes</button>
-          <button class="filter" type="button" data-filter="telephones" aria-pressed="false">📱 Téléphones</button>
-          <button class="filter" type="button" data-filter="mode" aria-pressed="false">👖 Mode de luxe</button>
-          <button class="filter" type="button" data-filter="audio" aria-pressed="false">🎧 Audio</button>
-        </div>
-        <div class="products" id="products">
-          <article class="product" data-category="gourmandises"><div class="product-art bg-peach"><span class="tag">PETIT-DÉJEUNER</span>🥣</div><div class="product-info"><small>Gourmandises</small><h3>Céréales choco-croustillantes</h3><div class="product-bottom"><span class="price">3,49 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="jeux"><div class="product-art bg-lilac"><span class="tag">POUR S'AMUSER</span>🎮</div><div class="product-info"><small>Jeux vidéo</small><h3>Jeu vidéo — Grande aventure</h3><div class="product-bottom"><span class="price">50 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="hygiene"><div class="product-art bg-mint"><span class="tag">SOURIRE FRAIS</span>🪥</div><div class="product-info"><small>Hygiène</small><h3>Dentifrice menthe rigolote</h3><div class="product-bottom"><span class="price">2,79 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="gourmandises"><div class="product-art bg-lemon"><span class="tag">À MÂCHOUILLER</span>🍬</div><div class="product-info"><small>Gourmandises</small><h3>Chewing-gums fruités</h3><div class="product-bottom"><span class="price">1,50 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="jeux"><div class="product-art bg-sky"><span class="tag">PRÊTE À JOUER</span>🕹️</div><div class="product-info"><small>Jeux & consoles</small><h3>Console de jeu</h3><div class="product-bottom"><span class="price">350 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="foot"><div class="product-art bg-rose"><span class="tag">ALLEZ L'ÉQUIPE !</span>👕</div><div class="product-info"><small>Football</small><h3>Maillot de foot des champions</h3><div class="product-bottom"><span class="price">39,99 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="deco"><div class="product-art bg-lavender"><span class="tag">JOLI CHEZ SOI</span>🪴</div><div class="product-info"><small>Décoration</small><h3>Petit pot de plante déco</h3><div class="product-bottom"><span class="price">12,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="parfum"><div class="product-art bg-coral"><span class="tag">DOUCEUR PARFUMÉE</span>🧴</div><div class="product-info"><small>Parfums</small><h3>Eau de parfum fleurie</h3><div class="product-bottom"><span class="price">24,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="coques"><div class="product-art bg-aqua"><span class="tag">PROTÈGE TON TÉLÉPHONE</span>📱</div><div class="product-info"><small>Accessoires téléphone</small><h3>Coque colorée et fantaisie</h3><div class="product-bottom"><span class="price">14,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="manettes"><div class="product-art bg-blue"><span class="tag">PRÊTE À JOUER</span>🎮</div><div class="product-info"><small>Jeux & accessoires</small><h3>Manette sans fil</h3><div class="product-bottom"><span class="price">49,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="telephones"><div class="product-art bg-sky"><span class="tag">NOUVEAUTÉ</span>📱</div><div class="product-info"><small>Téléphones</small><h3>Smartphone dernière génération</h3><div class="product-bottom"><span class="price">699,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="foot"><div class="product-art bg-lemon"><span class="tag">SUR LE TERRAIN</span>👟</div><div class="product-info"><small>Football</small><h3>Crampons de football</h3><div class="product-bottom"><span class="price">89,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="mode"><div class="product-art bg-lilac"><span class="tag">STYLE ÉLÉGANT</span>👖</div><div class="product-info"><small>Mode de luxe</small><h3>Pantalon chic</h3><div class="product-bottom"><span class="price">129,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="mode"><div class="product-art bg-rose"><span class="tag">COLLECTION PREMIUM</span>👕</div><div class="product-info"><small>Mode de luxe</small><h3>T-shirt de luxe</h3><div class="product-bottom"><span class="price">89,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="deco"><div class="product-art bg-peach"><span class="tag">PETIT OBJET DÉCO</span>🧸</div><div class="product-info"><small>Décoration</small><h3>Figurine de collection</h3><div class="product-bottom"><span class="price">19,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="audio"><div class="product-art bg-aqua"><span class="tag">SANS FIL</span>🎧</div><div class="product-info"><small>Audio</small><h3>Écouteurs sans fil</h3><div class="product-bottom"><span class="price">59,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-          <article class="product" data-category="audio"><div class="product-art bg-blue"><span class="tag">IMMERSION GAMING</span>🎧</div><div class="product-info"><small>Audio & gaming</small><h3>Casque gaming confortable</h3><div class="product-bottom"><span class="price">79,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
-        </div>
+    <section class="shop-section" id="boutique"><div class="section-inner"><div class="section-head"><div><div class="kicker">Le bazar préféré</div><h2>À chacun son petit plaisir.</h2></div><p class="section-sub">Fouille dans les rayons : jeux, mode, déco, gourmandises et accessoires t'attendent !</p></div>
+      <div class="filters" role="group" aria-label="Filtrer les produits">
+        <button class="filter active" type="button" data-filter="all" aria-pressed="true">Tout voir</button>
+        <button class="filter" type="button" data-filter="gourmandises" aria-pressed="false">🥣 Gourmandises</button>
+        <button class="filter" type="button" data-filter="jeux" aria-pressed="false">🎮 Jeux vidéo</button>
+        <button class="filter" type="button" data-filter="mode" aria-pressed="false">👕 Mode</button>
+        <button class="filter" type="button" data-filter="deco" aria-pressed="false">💡 Déco & éclairage</button>
+        <button class="filter" type="button" data-filter="accessoires" aria-pressed="false">🎒 Accessoires</button>
       </div>
-    </section>
+      <div class="products" id="products">
+        <article class="product" data-category="gourmandises"><div class="product-art bg-peach"><span class="tag">PETIT-DÉJEUNER</span>🥣</div><div class="product-info"><small>Gourmandises</small><h3>Céréales choco-croustillantes</h3><div class="product-bottom"><span class="price">3,49 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="jeux"><div class="product-art bg-lilac"><span class="tag">POUR S'AMUSER</span>🎮</div><div class="product-info"><small>Jeux vidéo</small><h3>Grand jeu d'aventure</h3><div class="product-bottom"><span class="price">50 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="deco"><div class="product-art bg-lavender"><span class="tag">JOLI CHEZ SOI</span>🪴</div><div class="product-info"><small>Décoration</small><h3>Petit pot de plante déco</h3><div class="product-bottom"><span class="price">12,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="mode"><div class="product-art bg-blue"><span class="tag">NOUVEAUTÉ GAMING</span>🎮</div><div class="product-info"><small>Jeux vidéo</small><h3>Grand Theft Auto VI</h3><div class="product-bottom"><span class="price">79,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="mode"><div class="product-art bg-rose"><span class="tag">CONFORT AU QUOTIDIEN</span>🩳</div><div class="product-info"><small>Mode & sous-vêtements</small><h3>Caleçon Calvin Klein</h3><div class="product-bottom"><span class="price">29,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="deco"><div class="product-art bg-sky"><span class="tag">AMBIANCE COLORÉE</span>💡</div><div class="product-info"><small>Déco & éclairage</small><h3>Ruban LED multicolore</h3><div class="product-bottom"><span class="price">19,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="accessoires"><div class="product-art bg-mint"><span class="tag">PRÊT POUR L'AVENTURE</span>🎒</div><div class="product-info"><small>Sacs & accessoires</small><h3>Sac à dos Nike</h3><div class="product-bottom"><span class="price">49,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="mode"><div class="product-art bg-coral"><span class="tag">STYLE ÉLÉGANT</span>👕</div><div class="product-info"><small>Mode</small><h3>T-shirt de luxe</h3><div class="product-bottom"><span class="price">89,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+        <article class="product" data-category="accessoires"><div class="product-art bg-aqua"><span class="tag">SANS FIL</span>🎧</div><div class="product-info"><small>Audio & accessoires</small><h3>Écouteurs sans fil</h3><div class="product-bottom"><span class="price">59,90 €</span><button class="discover" type="button">À découvrir ↗</button></div></div></article>
+      </div>
+    </div></section>
     <section class="fun-banner" id="histoire"><div><h2>Un peu de tout, beaucoup de bonne humeur.</h2><p>ChocoChoca, c'est le coin des envies inattendues et des petits plaisirs.</p></div><a class="button" href="#boutique">Trouver mon bonheur <span aria-hidden="true">↗</span></a></section>
   </main>
   <footer><div class="footer-inner"><span>© 2026 ChocoChoca — Fait avec bonne humeur 🍫</span><span>Une vitrine de démonstration — les produits ne sont pas en vente.</span></div></footer>
